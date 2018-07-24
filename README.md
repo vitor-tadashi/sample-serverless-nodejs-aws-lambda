@@ -19,12 +19,20 @@ Samples serverless functions using Node, Serverless framework and AWS Lambda
 
 3. **Create a Service:**
 
-  You can create a new service or [install existing services](#how-to-install-a-service).
+  You can create a new service
   ```bash
   # Create a new Serverless Service/Project
-  serverless create --template aws-nodejs --path my-service
+  serverless create --template aws-nodejs --path sample-serverless-nodejs-aws-lambda
   # Change into the newly created directory
-  cd my-service
+  cd sample-serverless-nodejs-aws-lambda
+  ```
+  if you're already in the folder you can just to this
+  
+  ```bash
+    # Create a new Serverless Service/Project
+    serverless create --template aws-nodejs
+    # Change into the newly created directory
+    cd sample-serverless-nodejs-aws-lambda
   ```
 
 4. **Deploy a Service:**
@@ -32,18 +40,4 @@ Samples serverless functions using Node, Serverless framework and AWS Lambda
   Use this when you have made changes to your Functions, Events or Resources in `serverless.yml` or you simply want to deploy all changes within your Service at the same time.
   ```bash
   serverless deploy -v
-  ```
-
-5. **Deploy the Function:**
-
-  Use this to quickly upload and overwrite your AWS Lambda code on AWS, allowing you to develop faster.
-  ```bash
-  serverless deploy function -f hello
-  ```
-
-6. **Invoke the Function:**
-
-  Invokes an AWS Lambda Function on AWS and returns logs.
-  ```bash
-  serverless invoke -f hello -l
   ```
