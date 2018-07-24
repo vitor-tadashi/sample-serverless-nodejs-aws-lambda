@@ -17,6 +17,7 @@ Samples serverless functions using Node, Serverless framework and AWS Lambda
 
 2. **Set-up your [Provider Credentials](https://github.com/serverless/serverless/blob/master/docs/providers/aws/guide/credentials.md)**. [Watch the video on setting up credentials](https://www.youtube.com/watch?v=HSd9uYj2LJA)
 
+> If you want to create a new serverless project you can use serverless-cli
 3. **Create a Service:**
 
   You can create a new service
@@ -41,3 +42,20 @@ Samples serverless functions using Node, Serverless framework and AWS Lambda
   ```bash
   serverless deploy -v
   ```
+  
+## Quick start
+Install the sample project
+```bash
+npm install
+```
+
+>If you're already set up your AWS you can execute this command
+```bash
+serverless deploy
+```
+
+>It's done, but if you want to execute locally you can just
+```bash
+serverless offline start
+```
+Here is the full documentation of [serverless-offline](https://github.com/dherault/serverless-offline)

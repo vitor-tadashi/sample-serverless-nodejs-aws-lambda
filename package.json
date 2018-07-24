@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "<p align=\"center\">   <a href=\"https://serverless.com/\">     <img       alt=\"Hello Serverless World\"       src=\"/images/serverless-framework.png\"     />   </a> </p>",
   "main": "handler.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "serverless-offline": "^3.25.6"},
+    "serverless-offline": "^3.25.6"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
