@@ -1,0 +1,18 @@
+service: serverless-aws-nodejs
+
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs8.10
+  timeout: 30
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+        - http:
+            path: /hello
+            method: get
+
+plugins:
+  - serverless-offline
