@@ -5,14 +5,18 @@ provider:
   region: us-east-1
   runtime: nodejs8.10
   timeout: 30
+  stage: dev
 
+# The name of your function it will be '<service>-<stage>-<functionName>' in this case
+# the function name is 'serverless-aws-nodejs-dev-hellow-world'
 functions:
-  hello:
-    handler: handler.hello
+  hello-world:
+    handler: src/hello-world/hello-world-handler.hello
     events:
         - http:
             path: /hello
             method: get
+            cors: true
 
 plugins:
   - serverless-offline
