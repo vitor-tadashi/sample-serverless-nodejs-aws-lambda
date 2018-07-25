@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "<p align=\"center\">   <a href=\"https://serverless.com/\">     <img       alt=\"Hello Serverless World\"       src=\"/images/serverless-framework.png\"     />   </a> </p>",
   "main": "handler.js",
-  "dependencies": {},
+  "dependencies": {
+    "eslint-config-airbnb": "^17.0.0"
+  },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
     "serverless-offline": "^3.25.6"
   },
   "scripts": {
+    "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Vitor Tadashi",
+  "license": "THE BEERWARE LICENSE"
 }
