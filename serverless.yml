@@ -18,5 +18,15 @@ functions:
             method: get
             cors: true
 
+  pokemon:
+    handler: src/pokemon/pokemon-handler.getById
+    events:
+        - http:
+            path: /pokemon/{id}
+            method: get
+            cors: true
+    environment:
+      URL_POKEMON_API: http://pokeapi.co/api/v2
+
 plugins:
   - serverless-offline

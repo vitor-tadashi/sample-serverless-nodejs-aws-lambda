@@ -4,7 +4,8 @@
   "description": "<p align=\"center\">   <a href=\"https://serverless.com/\">     <img       alt=\"Hello Serverless World\"       src=\"/images/serverless-framework.png\"     />   </a> </p>",
   "main": "handler.js",
   "dependencies": {
-    "eslint-config-airbnb": "^17.0.0"
+    "eslint-config-airbnb": "^17.0.0",
+    "request": "^2.87.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
