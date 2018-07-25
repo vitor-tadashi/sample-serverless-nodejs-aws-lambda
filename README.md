@@ -59,3 +59,9 @@ serverless deploy
 serverless offline start
 ```
 Here is the full documentation of [serverless-offline](https://github.com/dherault/serverless-offline)
+
+### Serverless functions documentation
+| Function                                                                                                        | Description                                                                                                         |
+|-----------------------------------------------------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------------- |
+| [hello-world](https://github.com/vitor-tadashi/sample-serverless-nodejs-aws-lambda/tree/master/src/hello-world) | A simple Serverless Hello World function.                                                                           |
+| [pokemon](https://github.com/vitor-tadashi/sample-serverless-nodejs-aws-lambda/tree/master/src/pokemon)         | A Serverless function to demonstrate how to use environment variables for AWS Lambda and get the URL path parameter |
