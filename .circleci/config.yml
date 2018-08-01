@@ -1,4 +1,4 @@
-version: 1
+version: 2
 jobs:
     # The build job
     build:
@@ -34,7 +34,7 @@ jobs:
                     npm run master
 
 workflows:
-    version: 1
+    version: 2
     # The deploy workflow
     serverless_deploy:
         jobs:
@@ -43,3 +43,5 @@ workflows:
                     branches:
                         only:
                             - master
+
+
