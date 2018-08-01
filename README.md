@@ -7,6 +7,8 @@
   </a>
 </p>
 
+[![CircleCI](https://circleci.com/gh/vitor-tadashi/sample-serverless-nodejs-aws-lambda.svg?style=svg)](https://circleci.com/gh/vitor-tadashi/sample-serverless-nodejs-aws-lambda)
+
 ## Serverless and AWS Lambda 
 Samples serverless functions using Node, Serverless framework and AWS Lambda
 
