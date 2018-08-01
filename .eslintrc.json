@@ -4,6 +4,7 @@
         "node": true
     },
     "parserOptions": {
+    "parserOptions": {
         "ecmaVersion": 2018
     },
     "extends": "eslint:recommended",
@@ -18,9 +19,9 @@
         "array-element-newline": "off",
         "arrow-body-style": "error",
         "arrow-parens": [
-	    "error",
-	    "as-needed"
-	],
+            "error",
+            "as-needed"
+        ],
         "arrow-spacing": [
             "error",
             {
@@ -35,7 +36,7 @@
             "1tbs"
         ],
         "callback-return": "off",
-        "camelcase": "error",
+        "camelcase": [ "error", {"properties": "never"}],
         "capitalized-comments": "off",
         "class-methods-use-this": "off",
         "comma-dangle": "off",

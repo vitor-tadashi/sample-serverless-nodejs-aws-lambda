@@ -17,7 +17,7 @@
   },
   "scripts": {
     "lint": "eslint src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "master": "serverless deploy --verbose --conceal --stage dev"
   },
   "author": "Vitor Tadashi",
   "license": "THE BEERWARE LICENSE"
