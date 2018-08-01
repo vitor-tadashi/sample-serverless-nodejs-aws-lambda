@@ -1,0 +1,9 @@
+# The name of your function it will be '<service>-<stage>-<functionName>' in this case
+# the function name is 'serverless-aws-nodejs-dev-hello-world'
+hello-world:
+    handler: src/hello-world/hello-world-handler.hello
+    events:
+        - http:
+            path: /hello
+            method: get
+            cors: true

@@ -1,0 +1,11 @@
+# The name of your function it will be '<service>-<stage>-<functionName>' in this case
+# the function name is 'serverless-aws-nodejs-dev-pokemon'
+pokemon:
+    handler: src/pokemon/pokemon-handler.getById
+    events:
+        - http:
+            path: /pokemon/{id}
+            method: get
+            cors: true
+    environment:
+        URL_POKEMON_API: http://pokeapi.co/api/v2

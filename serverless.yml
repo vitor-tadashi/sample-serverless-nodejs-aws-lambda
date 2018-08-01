@@ -7,26 +7,13 @@ provider:
   timeout: 30
   stage: dev
 
-# The name of your function it will be '<service>-<stage>-<functionName>' in this case
-# the function name is 'serverless-aws-nodejs-dev-hellow-world'
+# You can import other .yml routes
+# In this case it is better to organize if you have many routes
+# The name of your functions it will be '<service>-<stage>-<functionName>'
 functions:
-  hello-world:
-    handler: src/hello-world/hello-world-handler.hello
-    events:
-        - http:
-            path: /hello
-            method: get
-            cors: true
-
-  pokemon:
-    handler: src/pokemon/pokemon-handler.getById
-    events:
-        - http:
-            path: /pokemon/{id}
-            method: get
-            cors: true
-    environment:
-      URL_POKEMON_API: http://pokeapi.co/api/v2
+    - ${file(src/auth/auth-route.yml)}
+    - ${file(src/hello-world/hello-world-route.yml)}
+    - ${file(src/pokemon/pokemon-route.yml)}
 
 plugins:
   - serverless-offline

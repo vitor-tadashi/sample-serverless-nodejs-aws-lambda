@@ -1,0 +1,26 @@
+# The name of your function it will be '<service>-<stage>-<functionName>' in this case
+# the function name is 'serverless-aws-nodejs-dev-sign-token'
+sign-token:
+    handler: src/auth/auth-handler.register
+    events:
+    - http:
+          path: auth/{id}
+          method: post
+          cors: true
+
+# the function name is 'serverless-aws-nodejs-dev-verify-token'
+verify-token:
+    handler: src/auth/auth-handler.auth
+
+# the function name is 'serverless-aws-nodejs-dev-hello-world-with-token'
+hello-world-with-token:
+    handler: src/auth/auth-handler.helloWithToken
+    events:
+    - http:
+          path: auth
+          method: get
+          cors: true
+          authorizer:
+              name: verify-token
+              resultTtlInSeconds: 0
+
