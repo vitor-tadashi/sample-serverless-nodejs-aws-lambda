@@ -15,23 +15,25 @@ jobs:
             # Restore local dependencies from cache
             - restore_cache:
                 keys:
-                - v1-dependencies-{{ checksum "package.json" }}
-                - v1-dependencies-
+                - dependencies-cache-{{ checksum "package.json" }}
+                 # fallback to using the latest cache if no exact match is found
+                - dependencies-cache
             # Install project dependencies
             - run:
-                name: Install local dependencies
-                command: npm install
+                name: Install Serverless CLI and dependencies
+                command: |
+                    sudo npm i -g serverless
+                    npm install
             # Cache local dependencies if they don't exist
             - save_cache:
-                key: v1-dependencies-{{ checksum "package.json" }}
+                key: dependencies-cache-{{ checksum "package.json" }}
                 paths:
                     - node_modules
             # Build project with different configuration based on
             # the current branch
             - run:
                 name: Deploying
-                command: |
-                    npm run master
+                command: sls deploy -v
 
 workflows:
     version: 2

@@ -16,8 +16,7 @@
     "serverless-offline": "^3.25.6"
   },
   "scripts": {
-    "lint": "eslint src",
-    "master": "serverless deploy --verbose --conceal --stage dev"
+    "lint": "eslint src"
   },
   "author": "Vitor Tadashi",
   "license": "THE BEERWARE LICENSE"
