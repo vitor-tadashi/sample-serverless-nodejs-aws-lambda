@@ -6,6 +6,14 @@ This example demonstrates how to use environment variables for AWS Lambdas.
 
 - Provide settings as environment variables to your Lambda functions
 
+> In pokemon-route.yml if you open you can see this code
+```
+environment:
+    URL_POKEMON_API: http://pokeapi.co/api/v2
+```
+
+In AWS Lambda you can change it
+
 ## How it works
 
 The first time you create or update Lambda functions that use environment variables in a region, a default service key is created for you automatically within AWS KMS. This key is used to encrypt environment variables.
